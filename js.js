@@ -1,16 +1,4 @@
-window.onDomReady = DomReady;
-//Setup the event
-function DomReady(fn)
-{
-	//W3C
-	if(document.addEventListener)
-	{
-		document.addEventListener("DOMContentLoaded", fn, false);
-	}
-}
-//execute as soon as DOM is loaded
-window.onDomReady(function() {
-
+Ext.onReady(function() {
 	var segments = 5;
 	var image = document.getElementById('cat');
 	var imageWidth = image.width;
@@ -73,18 +61,6 @@ window.onDomReady(function() {
 				colors.greens += imageData.data[index+1];
 				colors.blues += imageData.data[index+2];
 				colors.count += 1;
-				/*
-				if(n === Math.floor(imageWidth/segments)-1) {
-					imageData.data[0] = 0;
-					imageData.data[1] = 0;
-					imageData.data[2] = 0;
-				} else {
-					imageData.data[0] = 45;
-					imageData.data[1] = 244;
-					imageData.data[2] = 46;
-				}
-				context.putImageData(imageData, xOffset+n, yOffset+j);
-				*/
 			}
 		}
 		segmentColors.push({
