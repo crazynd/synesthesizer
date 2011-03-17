@@ -1,15 +1,15 @@
 Ext.onReady(function() {
 	var segments = 5;
-	var image = document.getElementById('cat');
+	var image = document.getElementById('image');
 	var imageWidth = image.width;
 	var imageHeight = image.height;
-	var canvas = document.getElementById('image');
+	var canvas = document.getElementById('canvas');
 	canvas.setAttribute('width', imageWidth);
 	canvas.setAttribute('height', imageHeight);
 	var context = canvas.getContext('2d');
 
 	context.drawImage(image,0,0);
-	document.getElementById('cat').setAttribute('style', 'display: none;');
+	image.setAttribute('style', 'display: none;');
 	var values = [];
 	var yOffset = Math.floor(imageHeight/3);
 	console.log('yOffset: '+yOffset);
