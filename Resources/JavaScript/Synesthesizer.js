@@ -8,7 +8,7 @@ Ext.onReady(function() {
 	canvas.setAttribute('height', imageHeight);
 	var context = canvas.getContext('2d');
 
-	context.drawImage(image,0,0);
+	context.drawImage(image, 0, 0, imageWidth, imageHeight);
 	image.setAttribute('style', 'display: none;');
 	var values = [];
 	//console.log('yOffset: '+yOffset);
