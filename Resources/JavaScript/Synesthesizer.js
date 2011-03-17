@@ -1,5 +1,5 @@
 Ext.onReady(function() {
-	var segments = 5;
+	var segments = 15;
 	var image = document.getElementById('image');
 	var imageWidth = image.width;
 	var imageHeight = image.height;
@@ -11,8 +11,12 @@ Ext.onReady(function() {
 	context.drawImage(image,0,0);
 	image.setAttribute('style', 'display: none;');
 	var values = [];
-	var yOffset = Math.floor(imageHeight/3);
 	//console.log('yOffset: '+yOffset);
+
+	var segmentWidth = Math.ceil(imageWidth/segments);
+	var segmentHeight = Math.ceil(imageHeight/3);
+
+	var yOffset = segmentHeight;
 
 	var segmentColors = [];
 
@@ -37,11 +41,12 @@ Ext.onReady(function() {
 			colors.greens = 0;
 			colors.blues = 0;
 			colors.count = 0;
+		},
+		toBW: function(color) {
+			return parseInt( (color.red + color.green + color.blue) / 3);
 		}
 	};
 
-	segmentWidth = Math.floor(imageWidth/segments);
-	segmentHeight = Math.floor(imageHeight/3);
 
 	// Segments
 	for(var i = 0; i < segments; i++) {
@@ -74,8 +79,12 @@ Ext.onReady(function() {
 
 	// Draw boxes
 	segmentColors.forEach(function(segment) {
+		var gray = colors.toBW(segment.color);
+		context.borderColor = 'rgba(0, 0, 0, .5)';
+		context.borderStyle = 'solid';
 		context.fillStyle = 'rgba('+segment.color.red+', '+segment.color.green+', '+segment.color.blue+','+.8+')';
+		//context.fillStyle = 'rgba('+gray+', '+gray+', '+gray+','+.8+')';
 		context.fillRect(segment.x, segment.y, segment.width, segment.height);
-
+		context.strokeRect(segment.x, segment.y, segment.width, segment.height)
 	});
 });
