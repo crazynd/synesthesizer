@@ -12,7 +12,7 @@ Ext.onReady(function() {
 	image.setAttribute('style', 'display: none;');
 	var values = [];
 	var yOffset = Math.floor(imageHeight/3);
-	console.log('yOffset: '+yOffset);
+	//console.log('yOffset: '+yOffset);
 
 	var segmentColors = [];
 
@@ -46,7 +46,7 @@ Ext.onReady(function() {
 	// Segments
 	for(var i = 0; i < segments; i++) {
 		var xOffset = i*segmentWidth;
-		console.log('xOffset: '+xOffset);
+		//console.log('xOffset: '+xOffset);
 		var imageData = context.getImageData(xOffset,yOffset,segmentWidth,segmentHeight);
 		var segmentPixels = [];
 
