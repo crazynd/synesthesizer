@@ -26,9 +26,9 @@ Ext.onReady(function() {
 		blues: 0,
 		count: 0,
 		getAverageColor: function() {
-			var red = parseInt(colors.reds/colors.count);
-			var green = parseInt(colors.greens/colors.count);
-			var blue = parseInt(colors.blues/colors.count);
+			var red = parseInt(colors.reds/colors.count, 10);
+			var green = parseInt(colors.greens/colors.count, 10);
+			var blue = parseInt(colors.blues/colors.count, 10);
 			colors.reset();
 			return {
 				red: red,
@@ -43,7 +43,7 @@ Ext.onReady(function() {
 			colors.count = 0;
 		},
 		toBW: function(color) {
-			return parseInt( (color.red + color.green + color.blue) / 3);
+			return parseInt( (color.red + color.green + color.blue) / 3, 10);
 		}
 	};
 
@@ -60,7 +60,7 @@ Ext.onReady(function() {
 
 			// Horizontal
 			for(var n = 0; n < imageData.width; n++) {
-				var index = ( (n*4)*imageData.width ) +(j*4);
+				//var index = ( (n*4)*imageData.width ) +(j*4);
 				var index = ((n*4) * j);
 				colors.reds += imageData.data[index];
 				colors.greens += imageData.data[index+1];
@@ -82,9 +82,9 @@ Ext.onReady(function() {
 		var gray = colors.toBW(segment.color);
 		context.borderColor = 'rgba(0, 0, 0, .5)';
 		context.borderStyle = 'solid';
-		context.fillStyle = 'rgba('+segment.color.red+', '+segment.color.green+', '+segment.color.blue+','+.8+')';
+		context.fillStyle = 'rgba('+segment.color.red+', '+segment.color.green+', '+segment.color.blue+','+0.8+')';
 		//context.fillStyle = 'rgba('+gray+', '+gray+', '+gray+','+.8+')';
 		context.fillRect(segment.x, segment.y, segment.width, segment.height);
-		context.strokeRect(segment.x, segment.y, segment.width, segment.height)
+		context.strokeRect(segment.x, segment.y, segment.width, segment.height);
 	});
 });
