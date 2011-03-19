@@ -32,6 +32,7 @@ Ext.setup({
 					afterlayout: function() {
 						Synesthesizer.setImage(Ext.get('image'));
 						Synesthesizer.setSegments(15);
+						Ext.getCmp('sliderField').labelEl.setHTML(Synesthesizer.getSegments() + ' Segments');
 						Ext.getCmp('sliderField').addListener('change', function(slider, thumb, newValue, oldValue) {
 							Synesthesizer.setSegments(newValue);
 							slider.labelEl.setHTML(Synesthesizer.getSegments() +' Segments');
