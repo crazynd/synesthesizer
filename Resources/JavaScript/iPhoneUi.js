@@ -1,6 +1,5 @@
 Ext.setup({
 	onReady: function() {
-		Synesthesizer.setImage(Ext.get('image'));
 
 		var panel = new Ext.Panel({
 			fullscreen: true,
@@ -28,19 +27,25 @@ Ext.setup({
 				flex: 1, 
 				contentEl: 'synesthesizer',
 				centered: true,
-			},{
-				xtype: 'sliderfield',
-				label: 'Segments',
-				value: Synesthesizer.getSegments(),
-				minValue: 10,
-				maxValue: 30,
-				animationDuration: 0,
 				listeners: {
 					scope: this,
-					change: function(slider, thumb, newValue, oldValue) {
-						Synesthesizer.setSegments(newValue);
+					afterlayout: function() {
+						Synesthesizer.setImage(Ext.get('image'));
+						Synesthesizer.setSegments(15);
+						Ext.getCmp('sliderField').addListener('change', function(slider, thumb, newValue, oldValue) {
+							Synesthesizer.setSegments(newValue);
+							slider.labelEl.setHTML(Synesthesizer.getSegments() +' Segments');
+						});
 					}
 				}
+			},{
+				xtype: 'sliderfield',
+				label: Synesthesizer.getSegments() +' Segments',
+				value: 15,
+				id: 'sliderField',
+				minValue: 10,
+				maxValue: 30,
+				animationDuration: 0
 			}],
 		});
 	}

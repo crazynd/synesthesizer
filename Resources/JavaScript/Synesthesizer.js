@@ -7,7 +7,7 @@ var colors = {
 		var red = parseInt(colors.reds/colors.count, 10);
 		var green = parseInt(colors.greens/colors.count, 10);
 		var blue = parseInt(colors.blues/colors.count, 10);
-		colors.reset();
+		this.reset();
 		return {
 			red: red,
 			green: green,
@@ -15,10 +15,10 @@ var colors = {
 		};
 	},
 	reset: function() {
-		colors.reds = 0;
-		colors.greens = 0;
-		colors.blues = 0;
-		colors.count = 0;
+		this.reds = 0;
+		this.greens = 0;
+		this.blues = 0;
+		this.count = 0;
 	},
 	toBW: function(color) {
 		return parseInt( (color.red + color.green + color.blue) / 3, 10);
@@ -40,7 +40,7 @@ var Synesthesizer = {
 	 * This directly corresponds to the slider
 	 * in the iPhone UI:
 	 */
-	_segments: 15,
+	_segments: 0,
 
 	/**
 	 * Holds our canvas
@@ -52,7 +52,7 @@ var Synesthesizer = {
 	 */
 	_canvas2dContext: 0,
 
-	width: 0,
+	_width: 0,
 
 	getOriginalImageWidth: function() {
 		return this._originalImageWidth;
@@ -61,7 +61,8 @@ var Synesthesizer = {
 		return this._originalImageHeight;
 	},
 	getImageWidth: function() {
-		return this.getOriginalImageWidth()/4;
+		return this._width;
+		// return this.getOriginalImageWidth()/4;
 	},
 	getImageHeight: function() {
 		return this.getImageWidth() * (this.getOriginalImageHeight()/this.getOriginalImageWidth());
@@ -82,6 +83,7 @@ var Synesthesizer = {
 		this._image = image;
 		this._originalImageWidth = image.getWidth();
 		this._originalImageHeight = image.getHeight();
+		this._width = Ext.getCmp('imageView').getWidth();
 		this._imageWidth = this.getImageWidth();
 		this._imageHeight = this.getImageHeight();
 		this._createCanvas();
@@ -97,17 +99,18 @@ var Synesthesizer = {
 	},
 
 	_createCanvas: function() {
-		this._canvas = Ext.DomHelper.append('synesthesizer', {
-			tag: 'canvas',
-			id: 'canvas',
-		});
-		// We need to set the height, otherwise it defaults
-		// to 150… what a crap!
-		this._canvas.height = 192;
-		this._canvas2dContext = this._canvas.getContext('2d');
-		console.log(this.getImageHeight());
-		this.drawImageOnCanvas();
-		console.log(this._canvas.height);
+		if(this._canvas === null) {
+			this._canvas = Ext.DomHelper.append('synesthesizer', {
+				tag: 'canvas',
+				id: 'canvas',
+			});
+			// We need to set the height, otherwise it defaults
+			// to 150… what a crap!
+			this._canvas.height = this.getImageHeight();
+			this._canvas.width = this.getImageWidth();
+			this._canvas2dContext = this._canvas.getContext('2d');
+			this.drawImageOnCanvas();
+		}
 	},
 
 	/**
@@ -116,9 +119,9 @@ var Synesthesizer = {
 	 */
 	setSegments: function(segments) {
 		if(this._segments !== segments) {
-			console.log('Set segments');
 			this._segments = segments;
 			// Do recalculation here!
+			this.drawImageOnCanvas();
 			this.createSegments();
 			this.drawBoxes();
 		}
@@ -145,8 +148,6 @@ var Synesthesizer = {
 
 	// Draw boxes
 	drawBoxes: function() {
-		this.drawImageOnCanvas();
-		this._canvas2dContext.save();
 		this.segmentColors.forEach(function(segment) {
 			var gray = colors.toBW(segment.color);
 			this._canvas2dContext.borderColor = 'rgba(0, 0, 0, .5)';
@@ -170,14 +171,12 @@ var Synesthesizer = {
 		for(var i = 0; i < this.getSegments(); i++) {
 			var xOffset = i*this.getSegmentWidth();
 			var imageData = this._canvas2dContext.getImageData(xOffset,this.getYOffset(),this.getSegmentWidth(),this.getSegmentHeight());
-			var segmentPixels = [];
 
 			// Vertical
 			for(var j = 0; j < imageData.height; j++) {
 
 				// Horizontal
 				for(var n = 0; n < imageData.width; n++) {
-					//var index = ( (n*4)*imageData.width ) +(j*4);
 					var index = ((n*4) * j);
 					colors.reds += imageData.data[index];
 					colors.greens += imageData.data[index+1];
@@ -195,25 +194,3 @@ var Synesthesizer = {
 		}
 	}
 };
-
-
-/*
-//var image = Ext.get('image');
-var originalImageWidth = image.getWidth();
-var originalImageHeight = image.getHeight();
-//var imageWidth = Ext.getCmp('imageView').getWidth();
-var imageWidth = originalImageWidth/4;
-//console.log('Panel height: '+Ext.getCmp('imageView').getHeight());
-//console.log('We should get: ' + imageWidth + 'x' + imageHeight);
-var canvas = Ext.get('canvas');
-var canvas2dContext = canvas.dom.getContext('2d');
-console.log('Canvas height: '+canvas.getHeight());
-console.log('Canvas height: '+canvas.dom.height);
-//canvas.setWidth(imageWidth);
-//canvas.setHeight(imageHeight);
-image.hide();
-var yOffset = segmentHeight;
-
-var segmentColors = [];
-*/
-
