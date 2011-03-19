@@ -54,6 +54,9 @@ var Synesthesizer = {
 
 	_width: 0,
 
+	_sequence: [],
+	_tempSequence: [],
+
 	getOriginalImageWidth: function() {
 		return this._originalImageWidth;
 	},
@@ -148,6 +151,7 @@ var Synesthesizer = {
 
 	// Draw boxes
 	drawBoxes: function() {
+		this._sequence = [];
 		this.segmentColors.forEach(function(segment) {
 			var gray = colors.toBW(segment.color);
 			this._canvas2dContext.borderColor = 'rgba(0, 0, 0, .5)';
@@ -156,10 +160,13 @@ var Synesthesizer = {
 			this._canvas2dContext.fillStyle = 'rgba('+gray+', '+gray+', '+gray+','+.8+')';
 			this._canvas2dContext.fillRect(segment.x, segment.y, segment.width, segment.height);
 			this._canvas2dContext.strokeRect(segment.x, segment.y, segment.width, segment.height);
+
+			this.createNote(gray);
 		}, this);
 
 		// Reset segments:
 		this.segmentColors = [];
+		console.log(this._sequence);
 	},
 
 	drawImageOnCanvas: function() {
@@ -192,5 +199,48 @@ var Synesthesizer = {
 				height: this.getSegmentHeight()
 			});
 		}
+	},
+
+	createNote: function(amountOfGray) {
+		if(amountOfGray < 51) {
+			this._sequence.push('A');
+		} else if(amountOfGray >= 51 && amountOfGray < 102) {
+			this._sequence.push('C');
+		} else if(amountOfGray >= 102 && amountOfGray < 153) {
+			this._sequence.push('E');
+		} else if(amountOfGray >= 153 && amountOfGray < 206) {
+			this._sequence.push('F');
+		} else {
+			this._sequence.push('H');
+		}
+	},
+
+	playSequence: function() {
+		this._tempSequence = this._sequence;
+		console.log(Ext.get('note'+this._tempSequence[0]));
+		Ext.get('note'+this._tempSequence[0]).dom.play();
+	},
+
+	playNextNote: function() {
+		console.log(this._tempSequence);
+		this._tempSequence.shift();
+		if(this._tempSequence.length !== 0) {
+			Ext.get('note'+this._tempSequence[0]).dom.play();
+		}
+	},
+
+	initAudio: function() {
+		// Create DOM-Elements
+		notes = ['A', 'C', 'E', 'F', 'H'];
+		notes.forEach(function(note) {
+			console.log('NOTE: '+note);
+			Ext.DomHelper.append('synesthesizer',
+				{ tag: 'audio', src: 'Resources/Sounds/'+note+'.mp3', id: 'note'+note }
+			);
+		});
+		// Add listeners
+		Ext.select('audio').each(function(item, index, allItems){
+			item.addListener('ended', this.playNextNote, this);
+		}, this);
 	}
 };

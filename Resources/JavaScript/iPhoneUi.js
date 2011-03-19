@@ -12,8 +12,13 @@ Ext.setup({
 				xtype: 'toolbar',
 				ui   : 'dark',
 				items: {
-					text: 'Play'
-				},
+					text: 'Play',
+					listeners: {
+						tap: function() {
+							Synesthesizer.playSequence();
+						}
+					}
+				}
 			}],
 			layout: {
 				type: 'vbox',
@@ -32,6 +37,7 @@ Ext.setup({
 					afterlayout: function() {
 						Synesthesizer.setImage(Ext.get('image'));
 						Synesthesizer.setSegments(15);
+						Synesthesizer.initAudio();
 						Ext.getCmp('sliderField').labelEl.setHTML(Synesthesizer.getSegments() + ' Segments');
 						Ext.getCmp('sliderField').addListener('change', function(slider, thumb, newValue, oldValue) {
 							Synesthesizer.setSegments(newValue);
