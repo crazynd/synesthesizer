@@ -235,7 +235,7 @@ var Synesthesizer = {
 		notes.forEach(function(note) {
 			console.log('NOTE: '+note);
 			Ext.DomHelper.append('synesthesizer',
-				{ tag: 'audio', src: 'Resources/Sounds/'+note+'.mp3', id: 'note'+note }
+				{ tag: 'audio', preload: 'auto', src: 'Resources/Sounds/'+note+'.mp3', id: 'note'+note }
 			);
 		});
 		// Add listeners
