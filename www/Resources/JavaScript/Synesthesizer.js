@@ -219,7 +219,7 @@ var Synesthesizer = {
         this._tempSequence = this._sequence;
 
         var path = 'Resources/Sounds/';
-        var media = new Media(path+this._tempSequence[0]+'.mp3', function() {
+        var media = new Media(path+this._tempSequence[0]+'.wav', function() {
             Synesthesizer.playNextNote()
         });
 		//Ext.get('note'+this._tempSequence[0]).dom.play();
@@ -234,7 +234,7 @@ var Synesthesizer = {
 		if(this._tempSequence.length !== 0) {
             //
             var path = 'Resources/Sounds/';
-            var media = new Media(path+this._tempSequence[0]+'.mp3', function() {
+            var media = new Media(path+this._tempSequence[0]+'.wav', function() {
                 Synesthesizer.playNextNote()
             });
             media.play();
