@@ -156,8 +156,8 @@ var Synesthesizer = {
 			var gray = colors.toBW(segment.color);
 			this._canvas2dContext.borderColor = 'rgba(0, 0, 0, .5)';
 			this._canvas2dContext.borderStyle = 'solid';
-			//this._canvas2dContext.fillStyle = 'rgba('+segment.color.red+', '+segment.color.green+', '+segment.color.blue+','+1+')';
-			this._canvas2dContext.fillStyle = 'rgba('+gray+', '+gray+', '+gray+','+.8+')';
+			this._canvas2dContext.fillStyle = 'rgba('+segment.color.red+', '+segment.color.green+', '+segment.color.blue+','+1+')';
+			//this._canvas2dContext.fillStyle = 'rgba('+gray+', '+gray+', '+gray+','+.8+')';
 			this._canvas2dContext.fillRect(segment.x, segment.y, segment.width, segment.height);
 			this._canvas2dContext.strokeRect(segment.x, segment.y, segment.width, segment.height);
 
