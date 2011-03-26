@@ -14,14 +14,16 @@
 		6DA9AA7F133DCE070086232F /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 6DA9AA7E133DCE070086232F /* main.m */; };
 		6DA9AA82133DCE070086232F /* synesthesizerAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 6DA9AA81133DCE070086232F /* synesthesizerAppDelegate.m */; };
 		6DA9AA85133DCE070086232F /* MainWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6DA9AA83133DCE070086232F /* MainWindow.xib */; };
-		6DA9AA88133DCE070086232F /* RootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6DA9AA87133DCE070086232F /* RootViewController.m */; };
-		6DA9AA8B133DCE070086232F /* RootViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6DA9AA89133DCE070086232F /* RootViewController.xib */; };
+		6DA9AA88133DCE070086232F /* StartViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6DA9AA87133DCE070086232F /* StartViewController.m */; };
+		6DA9AA8B133DCE070086232F /* StartViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6DA9AA89133DCE070086232F /* StartViewController.xib */; };
 		6DA9AA92133DCE070086232F /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6DA9AA71133DCE070086232F /* UIKit.framework */; };
 		6DA9AA93133DCE070086232F /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6DA9AA73133DCE070086232F /* Foundation.framework */; };
 		6DA9AA94133DCE070086232F /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6DA9AA75133DCE070086232F /* CoreGraphics.framework */; };
 		6DA9AA9C133DCE070086232F /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 6DA9AA9A133DCE070086232F /* InfoPlist.strings */; };
 		6DA9AA9F133DCE070086232F /* synesthesizerTests.h in Resources */ = {isa = PBXBuildFile; fileRef = 6DA9AA9E133DCE070086232F /* synesthesizerTests.h */; };
 		6DA9AAA1133DCE070086232F /* synesthesizerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 6DA9AAA0133DCE070086232F /* synesthesizerTests.m */; };
+		6DA9AAB2133DF9D00086232F /* DetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6DA9AAB0133DF9D00086232F /* DetailViewController.m */; };
+		6DA9AAB3133DF9D00086232F /* DetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6DA9AAB1133DF9D00086232F /* DetailViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -39,22 +41,25 @@
 		6DA9AA71133DCE070086232F /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		6DA9AA73133DCE070086232F /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		6DA9AA75133DCE070086232F /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
-		6DA9AA79133DCE070086232F /* synesthesizer-Info.plist */ = {isa = PBXFileReference; path = "synesthesizer-Info.plist"; sourceTree = "<group>"; };
+		6DA9AA79133DCE070086232F /* synesthesizer-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "synesthesizer-Info.plist"; sourceTree = "<group>"; };
 		6DA9AA7B133DCE070086232F /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		6DA9AA7D133DCE070086232F /* synesthesizer-Prefix.pch */ = {isa = PBXFileReference; path = "synesthesizer-Prefix.pch"; sourceTree = "<group>"; };
+		6DA9AA7D133DCE070086232F /* synesthesizer-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "synesthesizer-Prefix.pch"; sourceTree = "<group>"; };
 		6DA9AA7E133DCE070086232F /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		6DA9AA80133DCE070086232F /* synesthesizerAppDelegate.h */ = {isa = PBXFileReference; path = synesthesizerAppDelegate.h; sourceTree = "<group>"; };
+		6DA9AA80133DCE070086232F /* synesthesizerAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = synesthesizerAppDelegate.h; sourceTree = "<group>"; };
 		6DA9AA81133DCE070086232F /* synesthesizerAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = synesthesizerAppDelegate.m; sourceTree = "<group>"; };
 		6DA9AA84133DCE070086232F /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/MainWindow.xib; sourceTree = "<group>"; };
-		6DA9AA86133DCE070086232F /* RootViewController.h */ = {isa = PBXFileReference; path = RootViewController.h; sourceTree = "<group>"; };
-		6DA9AA87133DCE070086232F /* RootViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RootViewController.m; sourceTree = "<group>"; };
-		6DA9AA8A133DCE070086232F /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/RootViewController.xib; sourceTree = "<group>"; };
+		6DA9AA86133DCE070086232F /* StartViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = StartViewController.h; sourceTree = "<group>"; };
+		6DA9AA87133DCE070086232F /* StartViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = StartViewController.m; sourceTree = "<group>"; };
+		6DA9AA8A133DCE070086232F /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/StartViewController.xib; sourceTree = "<group>"; };
 		6DA9AA91133DCE070086232F /* synesthesizerTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = synesthesizerTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
-		6DA9AA99133DCE070086232F /* synesthesizerTests-Info.plist */ = {isa = PBXFileReference; path = "synesthesizerTests-Info.plist"; sourceTree = "<group>"; };
+		6DA9AA99133DCE070086232F /* synesthesizerTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "synesthesizerTests-Info.plist"; sourceTree = "<group>"; };
 		6DA9AA9B133DCE070086232F /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		6DA9AA9D133DCE070086232F /* synesthesizerTests-Prefix.pch */ = {isa = PBXFileReference; path = "synesthesizerTests-Prefix.pch"; sourceTree = "<group>"; };
+		6DA9AA9D133DCE070086232F /* synesthesizerTests-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "synesthesizerTests-Prefix.pch"; sourceTree = "<group>"; };
 		6DA9AA9E133DCE070086232F /* synesthesizerTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = synesthesizerTests.h; sourceTree = "<group>"; };
 		6DA9AAA0133DCE070086232F /* synesthesizerTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = synesthesizerTests.m; sourceTree = "<group>"; };
+		6DA9AAAF133DF9D00086232F /* DetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DetailViewController.h; sourceTree = "<group>"; };
+		6DA9AAB0133DF9D00086232F /* DetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DetailViewController.m; sourceTree = "<group>"; };
+		6DA9AAB1133DF9D00086232F /* DetailViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DetailViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -116,9 +121,12 @@
 				6DA9AA80133DCE070086232F /* synesthesizerAppDelegate.h */,
 				6DA9AA81133DCE070086232F /* synesthesizerAppDelegate.m */,
 				6DA9AA83133DCE070086232F /* MainWindow.xib */,
-				6DA9AA86133DCE070086232F /* RootViewController.h */,
-				6DA9AA87133DCE070086232F /* RootViewController.m */,
-				6DA9AA89133DCE070086232F /* RootViewController.xib */,
+				6DA9AA86133DCE070086232F /* StartViewController.h */,
+				6DA9AA87133DCE070086232F /* StartViewController.m */,
+				6DA9AA89133DCE070086232F /* StartViewController.xib */,
+				6DA9AAAF133DF9D00086232F /* DetailViewController.h */,
+				6DA9AAB0133DF9D00086232F /* DetailViewController.m */,
+				6DA9AAB1133DF9D00086232F /* DetailViewController.xib */,
 				6DA9AA78133DCE070086232F /* Supporting Files */,
 			);
 			path = synesthesizer;
@@ -224,7 +232,8 @@
 			files = (
 				6DA9AA7C133DCE070086232F /* InfoPlist.strings in Resources */,
 				6DA9AA85133DCE070086232F /* MainWindow.xib in Resources */,
-				6DA9AA8B133DCE070086232F /* RootViewController.xib in Resources */,
+				6DA9AA8B133DCE070086232F /* StartViewController.xib in Resources */,
+				6DA9AAB3133DF9D00086232F /* DetailViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -262,7 +271,8 @@
 			files = (
 				6DA9AA7F133DCE070086232F /* main.m in Sources */,
 				6DA9AA82133DCE070086232F /* synesthesizerAppDelegate.m in Sources */,
-				6DA9AA88133DCE070086232F /* RootViewController.m in Sources */,
+				6DA9AA88133DCE070086232F /* StartViewController.m in Sources */,
+				6DA9AAB2133DF9D00086232F /* DetailViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -301,12 +311,12 @@
 			name = MainWindow.xib;
 			sourceTree = "<group>";
 		};
-		6DA9AA89133DCE070086232F /* RootViewController.xib */ = {
+		6DA9AA89133DCE070086232F /* StartViewController.xib */ = {
 			isa = PBXVariantGroup;
 			children = (
 				6DA9AA8A133DCE070086232F /* en */,
 			);
-			name = RootViewController.xib;
+			name = StartViewController.xib;
 			sourceTree = "<group>";
 		};
 		6DA9AA9A133DCE070086232F /* InfoPlist.strings */ = {
@@ -329,7 +339,7 @@
 				GCC_OPTIMIZATION_LEVEL = 0;
 				GCC_PREPROCESSOR_DEFINITIONS = DEBUG;
 				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
-				GCC_VERSION = com.apple.compilers.llvmgcc42;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
@@ -343,7 +353,7 @@
 				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				GCC_C_LANGUAGE_STANDARD = gnu99;
-				GCC_VERSION = com.apple.compilers.llvmgcc42;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
@@ -443,6 +453,7 @@
 				6DA9AAA6133DCE070086232F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		6DA9AAA7133DCE070086232F /* Build configuration list for PBXNativeTarget "synesthesizerTests" */ = {
 			isa = XCConfigurationList;
@@ -451,6 +462,7 @@
 				6DA9AAA9133DCE070086232F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
