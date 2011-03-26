@@ -1,0 +1,458 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		6DA9AA72133DCE070086232F /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6DA9AA71133DCE070086232F /* UIKit.framework */; };
+		6DA9AA74133DCE070086232F /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6DA9AA73133DCE070086232F /* Foundation.framework */; };
+		6DA9AA76133DCE070086232F /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6DA9AA75133DCE070086232F /* CoreGraphics.framework */; };
+		6DA9AA7C133DCE070086232F /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 6DA9AA7A133DCE070086232F /* InfoPlist.strings */; };
+		6DA9AA7F133DCE070086232F /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 6DA9AA7E133DCE070086232F /* main.m */; };
+		6DA9AA82133DCE070086232F /* synesthesizerAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 6DA9AA81133DCE070086232F /* synesthesizerAppDelegate.m */; };
+		6DA9AA85133DCE070086232F /* MainWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6DA9AA83133DCE070086232F /* MainWindow.xib */; };
+		6DA9AA88133DCE070086232F /* RootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6DA9AA87133DCE070086232F /* RootViewController.m */; };
+		6DA9AA8B133DCE070086232F /* RootViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6DA9AA89133DCE070086232F /* RootViewController.xib */; };
+		6DA9AA92133DCE070086232F /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6DA9AA71133DCE070086232F /* UIKit.framework */; };
+		6DA9AA93133DCE070086232F /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6DA9AA73133DCE070086232F /* Foundation.framework */; };
+		6DA9AA94133DCE070086232F /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6DA9AA75133DCE070086232F /* CoreGraphics.framework */; };
+		6DA9AA9C133DCE070086232F /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 6DA9AA9A133DCE070086232F /* InfoPlist.strings */; };
+		6DA9AA9F133DCE070086232F /* synesthesizerTests.h in Resources */ = {isa = PBXBuildFile; fileRef = 6DA9AA9E133DCE070086232F /* synesthesizerTests.h */; };
+		6DA9AAA1133DCE070086232F /* synesthesizerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 6DA9AAA0133DCE070086232F /* synesthesizerTests.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		6DA9AA95133DCE070086232F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 6DA9AA64133DCE070086232F /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 6DA9AA6C133DCE070086232F;
+			remoteInfo = synesthesizer;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		6DA9AA6D133DCE070086232F /* synesthesizer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = synesthesizer.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		6DA9AA71133DCE070086232F /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		6DA9AA73133DCE070086232F /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		6DA9AA75133DCE070086232F /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		6DA9AA79133DCE070086232F /* synesthesizer-Info.plist */ = {isa = PBXFileReference; path = "synesthesizer-Info.plist"; sourceTree = "<group>"; };
+		6DA9AA7B133DCE070086232F /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		6DA9AA7D133DCE070086232F /* synesthesizer-Prefix.pch */ = {isa = PBXFileReference; path = "synesthesizer-Prefix.pch"; sourceTree = "<group>"; };
+		6DA9AA7E133DCE070086232F /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		6DA9AA80133DCE070086232F /* synesthesizerAppDelegate.h */ = {isa = PBXFileReference; path = synesthesizerAppDelegate.h; sourceTree = "<group>"; };
+		6DA9AA81133DCE070086232F /* synesthesizerAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = synesthesizerAppDelegate.m; sourceTree = "<group>"; };
+		6DA9AA84133DCE070086232F /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/MainWindow.xib; sourceTree = "<group>"; };
+		6DA9AA86133DCE070086232F /* RootViewController.h */ = {isa = PBXFileReference; path = RootViewController.h; sourceTree = "<group>"; };
+		6DA9AA87133DCE070086232F /* RootViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RootViewController.m; sourceTree = "<group>"; };
+		6DA9AA8A133DCE070086232F /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/RootViewController.xib; sourceTree = "<group>"; };
+		6DA9AA91133DCE070086232F /* synesthesizerTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = synesthesizerTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
+		6DA9AA99133DCE070086232F /* synesthesizerTests-Info.plist */ = {isa = PBXFileReference; path = "synesthesizerTests-Info.plist"; sourceTree = "<group>"; };
+		6DA9AA9B133DCE070086232F /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		6DA9AA9D133DCE070086232F /* synesthesizerTests-Prefix.pch */ = {isa = PBXFileReference; path = "synesthesizerTests-Prefix.pch"; sourceTree = "<group>"; };
+		6DA9AA9E133DCE070086232F /* synesthesizerTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = synesthesizerTests.h; sourceTree = "<group>"; };
+		6DA9AAA0133DCE070086232F /* synesthesizerTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = synesthesizerTests.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		6DA9AA6A133DCE070086232F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6DA9AA72133DCE070086232F /* UIKit.framework in Frameworks */,
+				6DA9AA74133DCE070086232F /* Foundation.framework in Frameworks */,
+				6DA9AA76133DCE070086232F /* CoreGraphics.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6DA9AA8D133DCE070086232F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6DA9AA92133DCE070086232F /* UIKit.framework in Frameworks */,
+				6DA9AA93133DCE070086232F /* Foundation.framework in Frameworks */,
+				6DA9AA94133DCE070086232F /* CoreGraphics.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		6DA9AA62133DCE070086232F = {
+			isa = PBXGroup;
+			children = (
+				6DA9AA77133DCE070086232F /* synesthesizer */,
+				6DA9AA97133DCE070086232F /* synesthesizerTests */,
+				6DA9AA70133DCE070086232F /* Frameworks */,
+				6DA9AA6E133DCE070086232F /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		6DA9AA6E133DCE070086232F /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				6DA9AA6D133DCE070086232F /* synesthesizer.app */,
+				6DA9AA91133DCE070086232F /* synesthesizerTests.octest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		6DA9AA70133DCE070086232F /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				6DA9AA71133DCE070086232F /* UIKit.framework */,
+				6DA9AA73133DCE070086232F /* Foundation.framework */,
+				6DA9AA75133DCE070086232F /* CoreGraphics.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		6DA9AA77133DCE070086232F /* synesthesizer */ = {
+			isa = PBXGroup;
+			children = (
+				6DA9AA80133DCE070086232F /* synesthesizerAppDelegate.h */,
+				6DA9AA81133DCE070086232F /* synesthesizerAppDelegate.m */,
+				6DA9AA83133DCE070086232F /* MainWindow.xib */,
+				6DA9AA86133DCE070086232F /* RootViewController.h */,
+				6DA9AA87133DCE070086232F /* RootViewController.m */,
+				6DA9AA89133DCE070086232F /* RootViewController.xib */,
+				6DA9AA78133DCE070086232F /* Supporting Files */,
+			);
+			path = synesthesizer;
+			sourceTree = "<group>";
+		};
+		6DA9AA78133DCE070086232F /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				6DA9AA79133DCE070086232F /* synesthesizer-Info.plist */,
+				6DA9AA7A133DCE070086232F /* InfoPlist.strings */,
+				6DA9AA7D133DCE070086232F /* synesthesizer-Prefix.pch */,
+				6DA9AA7E133DCE070086232F /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		6DA9AA97133DCE070086232F /* synesthesizerTests */ = {
+			isa = PBXGroup;
+			children = (
+				6DA9AA9E133DCE070086232F /* synesthesizerTests.h */,
+				6DA9AAA0133DCE070086232F /* synesthesizerTests.m */,
+				6DA9AA98133DCE070086232F /* Supporting Files */,
+			);
+			path = synesthesizerTests;
+			sourceTree = "<group>";
+		};
+		6DA9AA98133DCE070086232F /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				6DA9AA99133DCE070086232F /* synesthesizerTests-Info.plist */,
+				6DA9AA9A133DCE070086232F /* InfoPlist.strings */,
+				6DA9AA9D133DCE070086232F /* synesthesizerTests-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		6DA9AA6C133DCE070086232F /* synesthesizer */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 6DA9AAA4133DCE070086232F /* Build configuration list for PBXNativeTarget "synesthesizer" */;
+			buildPhases = (
+				6DA9AA69133DCE070086232F /* Sources */,
+				6DA9AA6A133DCE070086232F /* Frameworks */,
+				6DA9AA6B133DCE070086232F /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = synesthesizer;
+			productName = synesthesizer;
+			productReference = 6DA9AA6D133DCE070086232F /* synesthesizer.app */;
+			productType = "com.apple.product-type.application";
+		};
+		6DA9AA90133DCE070086232F /* synesthesizerTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 6DA9AAA7133DCE070086232F /* Build configuration list for PBXNativeTarget "synesthesizerTests" */;
+			buildPhases = (
+				6DA9AA8C133DCE070086232F /* Sources */,
+				6DA9AA8D133DCE070086232F /* Frameworks */,
+				6DA9AA8E133DCE070086232F /* Resources */,
+				6DA9AA8F133DCE070086232F /* ShellScript */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				6DA9AA96133DCE070086232F /* PBXTargetDependency */,
+			);
+			name = synesthesizerTests;
+			productName = synesthesizerTests;
+			productReference = 6DA9AA91133DCE070086232F /* synesthesizerTests.octest */;
+			productType = "com.apple.product-type.bundle";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		6DA9AA64133DCE070086232F /* Project object */ = {
+			isa = PBXProject;
+			buildConfigurationList = 6DA9AA67133DCE070086232F /* Build configuration list for PBXProject "synesthesizer" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 6DA9AA62133DCE070086232F;
+			productRefGroup = 6DA9AA6E133DCE070086232F /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				6DA9AA6C133DCE070086232F /* synesthesizer */,
+				6DA9AA90133DCE070086232F /* synesthesizerTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		6DA9AA6B133DCE070086232F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6DA9AA7C133DCE070086232F /* InfoPlist.strings in Resources */,
+				6DA9AA85133DCE070086232F /* MainWindow.xib in Resources */,
+				6DA9AA8B133DCE070086232F /* RootViewController.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6DA9AA8E133DCE070086232F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6DA9AA9C133DCE070086232F /* InfoPlist.strings in Resources */,
+				6DA9AA9F133DCE070086232F /* synesthesizerTests.h in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		6DA9AA8F133DCE070086232F /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Run the unit tests in this test bundle.\n\"${SYSTEM_DEVELOPER_DIR}/Tools/RunUnitTests\"\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		6DA9AA69133DCE070086232F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6DA9AA7F133DCE070086232F /* main.m in Sources */,
+				6DA9AA82133DCE070086232F /* synesthesizerAppDelegate.m in Sources */,
+				6DA9AA88133DCE070086232F /* RootViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6DA9AA8C133DCE070086232F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6DA9AAA1133DCE070086232F /* synesthesizerTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		6DA9AA96133DCE070086232F /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 6DA9AA6C133DCE070086232F /* synesthesizer */;
+			targetProxy = 6DA9AA95133DCE070086232F /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		6DA9AA7A133DCE070086232F /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				6DA9AA7B133DCE070086232F /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		6DA9AA83133DCE070086232F /* MainWindow.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				6DA9AA84133DCE070086232F /* en */,
+			);
+			name = MainWindow.xib;
+			sourceTree = "<group>";
+		};
+		6DA9AA89133DCE070086232F /* RootViewController.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				6DA9AA8A133DCE070086232F /* en */,
+			);
+			name = RootViewController.xib;
+			sourceTree = "<group>";
+		};
+		6DA9AA9A133DCE070086232F /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				6DA9AA9B133DCE070086232F /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		6DA9AAA2133DCE070086232F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = DEBUG;
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_VERSION = com.apple.compilers.llvmgcc42;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		6DA9AAA3133DCE070086232F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_VERSION = com.apple.compilers.llvmgcc42;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				SDKROOT = iphoneos;
+			};
+			name = Release;
+		};
+		6DA9AAA5133DCE070086232F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COPY_PHASE_STRIP = NO;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "synesthesizer/synesthesizer-Prefix.pch";
+				INFOPLIST_FILE = "synesthesizer/synesthesizer-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		6DA9AAA6133DCE070086232F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COPY_PHASE_STRIP = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "synesthesizer/synesthesizer-Prefix.pch";
+				INFOPLIST_FILE = "synesthesizer/synesthesizer-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				VALIDATE_PRODUCT = YES;
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		6DA9AAA8133DCE070086232F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/synesthesizer.app/synesthesizer";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(DEVELOPER_LIBRARY_DIR)/Frameworks",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "synesthesizerTests/synesthesizerTests-Prefix.pch";
+				INFOPLIST_FILE = "synesthesizerTests/synesthesizerTests-Info.plist";
+				OTHER_LDFLAGS = (
+					"-framework",
+					SenTestingKit,
+				);
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = octest;
+			};
+			name = Debug;
+		};
+		6DA9AAA9133DCE070086232F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/synesthesizer.app/synesthesizer";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(DEVELOPER_LIBRARY_DIR)/Frameworks",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "synesthesizerTests/synesthesizerTests-Prefix.pch";
+				INFOPLIST_FILE = "synesthesizerTests/synesthesizerTests-Info.plist";
+				OTHER_LDFLAGS = (
+					"-framework",
+					SenTestingKit,
+				);
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = octest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		6DA9AA67133DCE070086232F /* Build configuration list for PBXProject "synesthesizer" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6DA9AAA2133DCE070086232F /* Debug */,
+				6DA9AAA3133DCE070086232F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		6DA9AAA4133DCE070086232F /* Build configuration list for PBXNativeTarget "synesthesizer" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6DA9AAA5133DCE070086232F /* Debug */,
+				6DA9AAA6133DCE070086232F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		6DA9AAA7133DCE070086232F /* Build configuration list for PBXNativeTarget "synesthesizerTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6DA9AAA8133DCE070086232F /* Debug */,
+				6DA9AAA9133DCE070086232F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 6DA9AA64133DCE070086232F /* Project object */;
+}
