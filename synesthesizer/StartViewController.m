@@ -112,7 +112,7 @@
 }
 
 - (IBAction)jumpButtonPressed:(id)sender {
-    DetailViewController *detailViewController = [[DetailViewController alloc] init];
+    CameraViewController *detailViewController = [[CameraViewController alloc] init];
     
     [self.navigationController pushViewController:detailViewController animated:YES];
     

@@ -7,7 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "DetailViewController.h"
+#import "CameraViewController.h"
 
 @interface StartViewController : UIViewController {
 

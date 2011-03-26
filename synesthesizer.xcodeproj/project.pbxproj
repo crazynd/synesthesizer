@@ -22,8 +22,12 @@
 		6DA9AA9C133DCE070086232F /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 6DA9AA9A133DCE070086232F /* InfoPlist.strings */; };
 		6DA9AA9F133DCE070086232F /* synesthesizerTests.h in Resources */ = {isa = PBXBuildFile; fileRef = 6DA9AA9E133DCE070086232F /* synesthesizerTests.h */; };
 		6DA9AAA1133DCE070086232F /* synesthesizerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 6DA9AAA0133DCE070086232F /* synesthesizerTests.m */; };
-		6DA9AAB2133DF9D00086232F /* DetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6DA9AAB0133DF9D00086232F /* DetailViewController.m */; };
-		6DA9AAB3133DF9D00086232F /* DetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6DA9AAB1133DF9D00086232F /* DetailViewController.xib */; };
+		6DA9AAB2133DF9D00086232F /* CameraViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6DA9AAB0133DF9D00086232F /* CameraViewController.m */; };
+		6DA9AAB3133DF9D00086232F /* CameraViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6DA9AAB1133DF9D00086232F /* CameraViewController.xib */; };
+		6DA9AB07133E14C70086232F /* ManipulationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6DA9AB05133E14C60086232F /* ManipulationViewController.m */; };
+		6DA9AB08133E14C70086232F /* ManipulationViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6DA9AB06133E14C70086232F /* ManipulationViewController.xib */; };
+		6DA9AB0A133E15EF0086232F /* me.png in Resources */ = {isa = PBXBuildFile; fileRef = 6DA9AB09133E15EF0086232F /* me.png */; };
+		6DA9AB15133E39580086232F /* BAPBAPSegment.m in Sources */ = {isa = PBXBuildFile; fileRef = 6DA9AB14133E39580086232F /* BAPBAPSegment.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -57,9 +61,15 @@
 		6DA9AA9D133DCE070086232F /* synesthesizerTests-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "synesthesizerTests-Prefix.pch"; sourceTree = "<group>"; };
 		6DA9AA9E133DCE070086232F /* synesthesizerTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = synesthesizerTests.h; sourceTree = "<group>"; };
 		6DA9AAA0133DCE070086232F /* synesthesizerTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = synesthesizerTests.m; sourceTree = "<group>"; };
-		6DA9AAAF133DF9D00086232F /* DetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DetailViewController.h; sourceTree = "<group>"; };
-		6DA9AAB0133DF9D00086232F /* DetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DetailViewController.m; sourceTree = "<group>"; };
-		6DA9AAB1133DF9D00086232F /* DetailViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DetailViewController.xib; sourceTree = "<group>"; };
+		6DA9AAAF133DF9D00086232F /* CameraViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CameraViewController.h; sourceTree = "<group>"; };
+		6DA9AAB0133DF9D00086232F /* CameraViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CameraViewController.m; sourceTree = "<group>"; };
+		6DA9AAB1133DF9D00086232F /* CameraViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CameraViewController.xib; sourceTree = "<group>"; };
+		6DA9AB04133E14C60086232F /* ManipulationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ManipulationViewController.h; sourceTree = "<group>"; };
+		6DA9AB05133E14C60086232F /* ManipulationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ManipulationViewController.m; sourceTree = "<group>"; };
+		6DA9AB06133E14C70086232F /* ManipulationViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ManipulationViewController.xib; sourceTree = "<group>"; };
+		6DA9AB09133E15EF0086232F /* me.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = me.png; sourceTree = "<group>"; };
+		6DA9AB13133E39580086232F /* BAPBAPSegment.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BAPBAPSegment.h; path = ../BAPBAPSegment.h; sourceTree = "<group>"; };
+		6DA9AB14133E39580086232F /* BAPBAPSegment.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BAPBAPSegment.m; path = ../BAPBAPSegment.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -118,15 +128,20 @@
 		6DA9AA77133DCE070086232F /* synesthesizer */ = {
 			isa = PBXGroup;
 			children = (
+				6DA9AB13133E39580086232F /* BAPBAPSegment.h */,
+				6DA9AB14133E39580086232F /* BAPBAPSegment.m */,
 				6DA9AA80133DCE070086232F /* synesthesizerAppDelegate.h */,
 				6DA9AA81133DCE070086232F /* synesthesizerAppDelegate.m */,
 				6DA9AA83133DCE070086232F /* MainWindow.xib */,
 				6DA9AA86133DCE070086232F /* StartViewController.h */,
 				6DA9AA87133DCE070086232F /* StartViewController.m */,
 				6DA9AA89133DCE070086232F /* StartViewController.xib */,
-				6DA9AAAF133DF9D00086232F /* DetailViewController.h */,
-				6DA9AAB0133DF9D00086232F /* DetailViewController.m */,
-				6DA9AAB1133DF9D00086232F /* DetailViewController.xib */,
+				6DA9AAAF133DF9D00086232F /* CameraViewController.h */,
+				6DA9AAB0133DF9D00086232F /* CameraViewController.m */,
+				6DA9AAB1133DF9D00086232F /* CameraViewController.xib */,
+				6DA9AB04133E14C60086232F /* ManipulationViewController.h */,
+				6DA9AB05133E14C60086232F /* ManipulationViewController.m */,
+				6DA9AB06133E14C70086232F /* ManipulationViewController.xib */,
 				6DA9AA78133DCE070086232F /* Supporting Files */,
 			);
 			path = synesthesizer;
@@ -137,6 +152,7 @@
 			children = (
 				6DA9AA79133DCE070086232F /* synesthesizer-Info.plist */,
 				6DA9AA7A133DCE070086232F /* InfoPlist.strings */,
+				6DA9AB09133E15EF0086232F /* me.png */,
 				6DA9AA7D133DCE070086232F /* synesthesizer-Prefix.pch */,
 				6DA9AA7E133DCE070086232F /* main.m */,
 			);
@@ -233,7 +249,9 @@
 				6DA9AA7C133DCE070086232F /* InfoPlist.strings in Resources */,
 				6DA9AA85133DCE070086232F /* MainWindow.xib in Resources */,
 				6DA9AA8B133DCE070086232F /* StartViewController.xib in Resources */,
-				6DA9AAB3133DF9D00086232F /* DetailViewController.xib in Resources */,
+				6DA9AAB3133DF9D00086232F /* CameraViewController.xib in Resources */,
+				6DA9AB08133E14C70086232F /* ManipulationViewController.xib in Resources */,
+				6DA9AB0A133E15EF0086232F /* me.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -272,7 +290,9 @@
 				6DA9AA7F133DCE070086232F /* main.m in Sources */,
 				6DA9AA82133DCE070086232F /* synesthesizerAppDelegate.m in Sources */,
 				6DA9AA88133DCE070086232F /* StartViewController.m in Sources */,
-				6DA9AAB2133DF9D00086232F /* DetailViewController.m in Sources */,
+				6DA9AAB2133DF9D00086232F /* CameraViewController.m in Sources */,
+				6DA9AB07133E14C70086232F /* ManipulationViewController.m in Sources */,
+				6DA9AB15133E39580086232F /* BAPBAPSegment.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
