@@ -58,21 +58,44 @@
     return (interfaceOrientation == UIInterfaceOrientationPortrait);
 }
 
+
+
 - (IBAction)snappedImage:(id)sender {
     
+    UIImagePickerController *picker = [[UIImagePickerController alloc] init];
+    picker.delegate = self;
+    
+    if ([UIImagePickerController isSourceTypeAvailable:UIImagePickerControllerSourceTypeCamera])
+        { picker.sourceType = UIImagePickerControllerSourceTypeCamera;} 
+    else
+        { picker.sourceType = UIImagePickerControllerSourceTypePhotoLibrary;}	
+    
+    [self presentModalViewController:picker animated:YES];
+	[picker release];
+    
+    }
+
+- (void)imagePickerController:(UIImagePickerController *) Picker
+
+    didFinishPickingMediaWithInfo:(NSDictionary *)info {
+    
+    UIImage *pickedImage = [info objectForKey:UIImagePickerControllerOriginalImage];
+    
+    [[Picker parentViewController] dismissModalViewControllerAnimated:YES];
     
     ManipulationViewController *manipulationViewController = [[ManipulationViewController alloc] init];
     
+    //UIImage *testImage = [[UIImage alloc] initWithContentsOfFile:[[NSBundle mainBundle] pathForResource: @"me" ofType: @"png"]];    
     
-    UIImage *testImage = [[UIImage alloc] initWithContentsOfFile:[[NSBundle mainBundle] pathForResource: @"me" ofType: @"png"]];
-        
-    //[manipulationViewController.imageView setImage: testImage];
-    [manipulationViewController setTheImage:testImage];
+    [manipulationViewController setTheImage:pickedImage];
     
-    [testImage release];
+    [pickedImage release];
     
     [self.navigationController pushViewController:manipulationViewController animated:YES];
     
     [manipulationViewController release];
+
+    
 }
+
 @end

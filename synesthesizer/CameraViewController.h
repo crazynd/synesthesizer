@@ -11,8 +11,8 @@
 #import "ManipulationViewController.h"
 
 
-@interface CameraViewController : UIViewController {
-    
+//@interface CameraViewController : UIViewController {
+@interface CameraViewController :  UIViewController<UIImagePickerControllerDelegate, UINavigationControllerDelegate> {
 
     IBOutlet UIButton *snapButton;
     
