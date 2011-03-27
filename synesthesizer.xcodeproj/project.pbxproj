@@ -68,8 +68,8 @@
 		6DA9AB05133E14C60086232F /* ManipulationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ManipulationViewController.m; sourceTree = "<group>"; };
 		6DA9AB06133E14C70086232F /* ManipulationViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ManipulationViewController.xib; sourceTree = "<group>"; };
 		6DA9AB09133E15EF0086232F /* me.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = me.png; sourceTree = "<group>"; };
-		6DA9AB13133E39580086232F /* BAPBAPSegment.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BAPBAPSegment.h; path = ../BAPBAPSegment.h; sourceTree = "<group>"; };
-		6DA9AB14133E39580086232F /* BAPBAPSegment.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BAPBAPSegment.m; path = ../BAPBAPSegment.m; sourceTree = "<group>"; };
+		6DA9AB13133E39580086232F /* BAPBAPSegment.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BAPBAPSegment.h; sourceTree = "<group>"; };
+		6DA9AB14133E39580086232F /* BAPBAPSegment.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BAPBAPSegment.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
