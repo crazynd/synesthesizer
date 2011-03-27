@@ -14,11 +14,11 @@
     
 }
 
-@property NSUInteger *_originX;
-@property NSUInteger *_originY;
-@property NSUInteger *_width;
-@property NSUInteger *_height;
+@property NSUInteger originX;
+@property NSUInteger originY;
+@property NSUInteger width;
+@property NSUInteger height;
 
 - (UIColor*) getAverageRGB;
-- (id) initWithCGImageRef: (CGImageRef) theImage;
+- (id) initWithCGImageRef: (CGImageRef) theImage x: (NSUInteger) x y: (NSUInteger) y width: (NSUInteger) w height: (NSUInteger) h;
 @end
